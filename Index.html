@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBlog - Emiliano Aquilini</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <nav class="custom-navbar">
+        <div class="nav-container">
+            <div class="navbar-brand-cinema">CineBlog 🎬</div>
+            <div class="navbar-links-cinema">
+                <a href="#">Home</a>
+                <a href="#film-section">I Film</a>
+                <a href="#work-with-us">Lavora con noi</a>
+                <a href="contatti.html" class="special-link">Contattaci</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-cinema">
+        <div class="hero-cinema-content">
+            <h1>Benvenuto su CineBlog</h1>
+            <p>Le migliori pellicole, recensioni e approfondimenti dal mondo del cinema</p>
+        </div>
+    </header>
+
+    <main class="container my-5 py-4">
+        
+        <section id="film-section" class="mb-5">
+            <h2 class="section-title text-center mb-5">I Film del Momento</h2>
+            
+            <div class="row g-5">
+                
+                <article class="col-12">
+                    <div class="cinema-card">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-12 col-md-6 card-img-wrapper">
+                                <a href="https://www.rottentomatoes.com" target="_blank">
+                                    <img src="Media/padrino.jpg" alt="Il Padrino" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="cinema-card-body">
+                                    <span class="badge bg-dark mb-2">Drammatico / Crime</span>
+                                    <h3>Il Padrino</h3>
+                                    <p>La pietra miliare del cinema mondiale diretta da Francis Ford Coppola. Una potente ed epica cronaca della famiglia Corleone, sospesa tra lealtà, potere e il passaggio generazionale del testimone criminale.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-12">
+                    <div class="cinema-card">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-12 col-md-6 card-img-wrapper">
+                                <a href="https://www.rottentomatoes.com" target="_blank">
+                                    <img src="Media/jurassic.jpg" alt="Jurassic Park" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="cinema-card-body">
+                                    <span class="badge bg-success mb-2">Avventura / Sci-Fi</span>
+                                    <h3>Jurassic Park</h3>
+                                    <p>Il capolavoro di Steven Spielberg che ha rivoluzionato gli effetti speciali. Un'incredibile avventura su un'isola remota dove i dinosauri tornano a vivere, trasformando un parco di divertimenti in un incubo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="col-12">
+                    <div class="cinema-card">
+                        <div class="row g-0 align-items-center">
+                            <div class="col-12 col-md-6 card-img-wrapper">
+                                <a href="https://www.rottentomatoes.com" target="_blank">
+                                    <img src="Media/toystory.jpg" alt="Toy Story" class="img-fluid">
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="cinema-card-body">
+                                    <span class="badge bg-warning text-dark mb-2">Animazione / Commedia</span>
+                                    <h3>Toy Story</h3>
+                                    <p>Il primo, storico lungometraggio interamente sviluppato in computer grafica dalla Pixar. Segui le avventure segrete dei giocattoli di Andy quando gli umani non sono presenti, guidati dal cowboy Woody e dallo space ranger Buzz.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <hr class="my-5 opacity-25">
+
+        <section id="work-with-us" class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="form-container-cinema p-4 border rounded shadow-sm bg-white">
+                    <h2 class="text-center mb-4">Lavora con Noi</h2>
+                    <form onsubmit="event.preventDefault();">
+                        <div class="mb-3">
+                            <label for="cinemaEmail" class="form-label">Indirizzo Email</label>
+                            <input type="email" class="form-control" id="cinemaEmail" placeholder="nome@esempio.com" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="cinemaPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="cinemaPassword" placeholder="Scegli una password" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#thanksModal">
+                                Invia Candidatura
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="#" class="scroll-to-top" title="Torna su">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <h5 class="text-white mb-2">CineBlog S.r.l.</h5>
+                    <p class="mb-0 text-white-50">
+                        Direttore Responsabile: <strong class="text-warning">Emiliano Aquilini</strong><br>
+                        Partita IVA: <strong class="text-warning">01234567890</strong>
+                    </p>
+                </div>
+                
+                <div class="col-12 col-md-6 text-center text-md-end">
+                    <p class="text-white-50 mb-2">I nostri contatti social:</p>
+                    <div class="social-links-cinema">
+                        <a href="https://www.facebook.com" target="_blank" class="me-3"><i class="bi bi-facebook"></i> Facebook</a>
+                        <a href="https://www.instagram.com" target="_blank" class="me-3"><i class="bi bi-instagram"></i> Instagram</a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="bi bi-youtube"></i> YouTube</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="thanksModal" tabindex="-1" aria-labelledby="thanksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="thanksModalLabel">Candidatura Ricevuta!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+                    <p class="mt-3 fs-5">Grazie per averci contattato</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Chiudi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* ==========================================
+   RESET GENERALE & CONFIGURAZIONE BASE
+   ========================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    padding-top: 70px;
+    font-family: 'Segoe UI', Roboto, sans-serif; /* Font personalizzato per i testi */
+}
+
+/* Font personalizzato applicato solo ai Titoli (Richiesto da CSS Base) */
+h1, h2, h3, .navbar-brand-cinema {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    color: #111111; /* Colore personalizzato ai titoli */
+}
+
+/* ==========================================
+   1. NAVBAR PERSONALIZZATA (Flexbox nativo)
+   ========================================== */
+.custom-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #111111;
+    z-index: 1030;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand-cinema {
+    color: #ffffff;
+    font-size: 22px; /* Dimensione logo controllata */
+}
+
+.navbar-links-cinema a {
+    color: #dddddd;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    font-size: 15px;
+    padding-bottom: 5px;
+    transition: color 0.2s ease;
+}
+
+/* Sfrutta lo pseudo-selettore :hover per applicare un border-bottom (Richiesto da CSS Avanzato 1) */
+.navbar-links-cinema a:hover {
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+
+/* ==========================================
+   2. HERO SECTION (Sfrutta Flexbox e background-image)
+   ========================================== */
+.hero-cinema {
+    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), 
+                      url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1600'); /* Almeno un background-image inserito */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex; /* Utilizza flex-box per sistemare l'header */
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-cinema h1 {
+    color: #ffffff; /* Sovrascrive il colore scuro dei titoli */
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   3. STRUTTURA DELLE CARD <ARTICLE>
+   ========================================== */
+.section-title {
+    font-size: 2.2rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #ffc107;
+}
+
+/* Regolazione personalizzata delle Card <article> */
+.cinema-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.cinema-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contenitore Immagine: Sfondo scuro per adattarsi alle locandine senza deformare */
+.card-img-wrapper {
+    background-color: #0b0c0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Impostazione delle dimensioni delle immagini interne alle card (Richiesto da CSS Base) */
+.card-img-wrapper img {
+    width: 100%;
+    height: 380px;
+    object-fit: contain; /* Risolve definitivamente il ritaglio delle immagini (es. Toy Story) */
+}
+
+.cinema-card-body {
+    padding: 40px;
+}
+
+.cinema-card-body h3 {
+    font-size: 1.7rem;
+    margin-top: 10px;
+}
+
+/* Cambio di colore dello sfondo all'hover (Richiesto da CSS Base) */
+.form-container-cinema {
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+.form-container-cinema:hover {
+    background-color: #f1f3f5; /* Cambia colore di sfondo all'hover */
+}
+
+/* ==========================================
+   4. BOTTONE TORNA SU (Position Fixed, CSS Avanzato 2)
+   ========================================== */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffc107;
+    color: #111111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1050;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.scroll-to-top:hover {
+    background-color: #111111;
+    color: #ffc107;
+    transform: scale(1.1); /* Piccola animazione all'immagine della freccettina */
+}
+
+/* ==========================================
+   5. CUSTOM FOOTER (Sfrutta Flexbox nativo come da traccia)
+   ========================================== */
+.custom-footer {
+    background-color: #111111;
+    padding: 35px 0;
+    border-top: 4px solid #ffc107;
+}
+
+.social-links-cinema a {
+    color: #ffc107 !important;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.social-links-cinema a:hover {
+    color: #ffffff !important;
+}
+
+/* ==========================================
+   RESPONSIVE OVERRIDES
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-cinema h1 { font-size: 2.2rem; }
+    .card-img-wrapper img {
+        height: 280px;
+        object-fit: cover; /* Su mobile l'immagine si adatta per coprire la riga intera dello smartphone */
+    }
+}
